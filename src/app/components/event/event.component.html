@@ -1,0 +1,64 @@
+
+<div class="card w-50 m-auto">
+    <h3 class="text-center">Event Details</h3>
+    <button class="btn btn-link" routerLink="/">Back</button>
+</div>
+
+<div class="card w-75 mx-auto my-2 p-2 border border-info">
+  <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+                <h3>{{ event.name }}</h3>
+            </div>
+            <div class="card-body">
+                          
+            <p>status: {{ event.status }}</p>
+            <p>{{ event.start_date | date }} - {{ event.end_date | date }}</p>
+ 
+            </div>
+          </div>
+         </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+                <p>{{ event.description }}</p>
+                <h5>{{event.participant_count }} going so far!</h5>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+                <h3>Contact Details</h3>
+            </div>
+            <div class="card-body">
+                <p> {{event.contact_given_name }}{{event.contact_family_name }}</p>
+                <p>{{event.contact_phone }}</p>
+                <p>{{ event.contact_email}}</p>
+              </div>
+          </div>
+        </div>
+          <div class="col-md-6">
+            
+            <div class="card">
+              <div class="card-header">
+                  <h3>Location Details</h3>
+              </div>
+              <div class="card-body">
+                <p>{{event.address1 }} {{event.address2 }} </p>
+                <p>{{event.city }}, {{ event.state}} {{ event.postal_code}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+  </div>
+        
+</div>
